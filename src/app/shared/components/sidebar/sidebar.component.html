@@ -1,0 +1,13 @@
+<aside class="sidebar">
+  <header class="sidebar__header">
+    <h3 class="sidebar__title">GifsApp</h3>
+  </header>
+  <hr class="sidebar__divider" />
+  <nav class="sidebar__nav">
+    <ul class="sidebar__list">
+      <li class="sidebar__item" *ngFor="let tag of tags">
+        <button class="sidebar__link" (click)="searchTag(tag)" >{{ tag | titlecase }}</button>
+      </li>
+    </ul>
+  </nav>
+</aside>

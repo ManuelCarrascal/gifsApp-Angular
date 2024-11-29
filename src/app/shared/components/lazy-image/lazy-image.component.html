@@ -1,0 +1,17 @@
+<div class="">
+  <img
+    [src]="url"
+    [alt]="alt"
+    class="card__image animate__animated animate__fadeIn"
+    (load)="onLoad()"
+    [ngStyle]="{ display: hasLoaded ? '' : 'none' }"
+  />
+  <img
+    *ngIf="!hasLoaded"
+    src="/loader.svg"
+    alt="Loading..."
+    height="20"
+    width="20"
+    class="card__image-loader"
+  />
+</div>
